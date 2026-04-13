@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form Input Mahasiswa</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="header-gray">
+    <h3>Form Input Mahasiswa</h3>
+</div>
+<div class="container">
+    <form th:action="@{/submit}" method="post">
+        <div class="form-group">
+            <label>Nama:</label>
+            <input type="text" name="nama" required>
+        </div>
+        <div class="form-group">
+            <label>NIM:</label>
+            <input type="text" name="nim" required>
+        </div>
+        <div class="form-group">
+            <label>Jenis Kelamin:</label>
+            <div style="margin-top: 5px;">
+                <input type="radio" id="lk" name="jenisKelamin" value="Laki-laki" required>
+                <label for="lk" style="display: inline; margin-right: 20px;">Laki-laki</label>
+            </div>
+            <div style="margin-top: 5px;">
+                <input type="radio" id="pr" name="jenisKelamin" value="Perempuan">
+                <label for="pr" style="display: inline;">Perempuan</label>
+            </div>
+        </div>
+        <button type="submit" class="btn-blue">Submit</button>
+    </form>
+    <div style="margin-top: 20px;">
+        <a th:href="@{/}" class="link-blue">Kembali ke Home</a>
+    </div>
+</div>
+</body>
+</html>
